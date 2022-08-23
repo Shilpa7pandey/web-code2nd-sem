@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            border: 1px solid black;
+            height: 55vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+        
+        .fitem {
+            border: 1px solid blue;
+            background-color: coral;
+            height: 120px;
+            width: 120px;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .fitem1 {
+            border: 1px solid blue;
+            background-color: coral;
+            height: 120px;
+            width: 120px;
+            padding: 10px;
+            margin: 10px;
+            flex-grow: 2;
+            order: 3;
+        }
+        
+        .fitem2 {
+            border: 1px solid blue;
+            background-color: coral;
+            height: 120px;
+            width: 120px;
+            padding: 10px;
+            margin: 10px;
+            flex-shrink: 2;
+            order: 2;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="fitem">hi</div>
+        <div class="fitem">hello</div>
+        <div class="fitem1">hii</div>
+        <div class="fitem2">hey</div>
+    </div>
+</body>
+
+</html>
