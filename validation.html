@@ -1,0 +1,75 @@
+<html>
+
+<head>
+
+    <script>
+        function validate() {
+            if (document.StudentRegistration.textnames.value == "") {
+                alert("Please provide your Name!");
+                document.StudentRegistration.textnames.focus();
+                return false;
+            }
+            if (document.StudentRegistration.fathername.value == "") {
+                alert("Please provide your Father Name!");
+                document.StudentRegistration.fathername.focus();
+                return false;
+            }
+            var email = document.StudentRegistration.emailid.value;
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
+            if (email == "" || atpos < 1 || (dotpos - atpos < 2)) {
+                alert("Please enter correct email ID")
+                document.StudentRegistration.emailid.focus();
+                return false;
+            }
+
+            if (document.StudentRegistration.mobileno.value == "" ||
+                isNaN(document.StudentRegistration.mobileno.value) ||
+                document.StudentRegistration.mobileno.value.length != 10) {
+                alert("Please provide a Mobile No in the format 123.");
+                document.StudentRegistration.mobileno.focus();
+                return false;
+            }
+            return (true);
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" name="StudentRegistration" onSubmit="return(validate());">
+        <table cellpadding="2" width="20%" bgcolor="99FFFF" align="center" cellspacing="2">
+            <tr>
+                <td colspan=2>
+                    <center>
+                        <font size=4><b>Student Registration Form</b></font>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type=text name=textnames id="textname" size="30"></td>
+            </tr>
+            <tr>
+                <td>Father Name</td>
+                <td><input type="text" name="fathername" id="fathername" size="30"></td>
+            </tr>
+            <td>MobileNo</td>
+            <td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+            </tr>
+            <tr>
+
+                <td>EmailId</td>
+
+                <td><input type="text" name="emailid" id="emailid" size="30"></td>
+
+            </tr>
+            <tr>
+                <td><input type="reset"></td>
+                <td colspan="2"><input type="submit" value="Submit Form" /></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>
