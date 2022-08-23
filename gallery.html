@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+        
+        .column img {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        
+        .column img:hover {
+            opacity: 1;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .container {
+            position: relative;
+            display: none;
+        }
+        
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <img src="library.jpg" alt="library" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="main building.jpg" alt="main building" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="senate hall.jpg" alt="senate hall" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="abuilding.jpg" alt="adminstrative building" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="ce.jpg" width="300" alt="computer department" onclick="myFunction(this);">
+        </div>
+    </div>
+    <div class="column">
+        <img src="nit-kurukshetra.jpg" alt="adminstrative building" onclick="myFunction(this);">
+    </div>
+
+
+    <div class="container">
+
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+
+        <img id="expandedImg" style="width:100%">
+
+
+        <div id="imgtext"></div>
+    </div>
+
+</body>
+
+</html>
