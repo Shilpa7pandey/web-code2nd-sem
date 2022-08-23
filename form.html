@@ -1,0 +1,114 @@
+<!DOCTYPE >
+<html>
+
+<head>
+    <title></title>
+    <style>
+        form {
+            background-color: azure;
+            text-align: left;
+            border-style: solid;
+            padding-left: 10px;
+            border-color: black;
+            width: 100%;
+            margin-top: 20px;
+            box-sizing: border-box;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+    <script>
+        function checkage() {
+            let x = document.getElementById("age").value;
+            if (x > 150 && x < 18) {
+                alert("Age must be between 18 and 150");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1 text-align="centre">Registration Form</h1>
+    <form action="https://drive.google.com/drive/my-drive" method="post" target="_parent" enctype="application/x-www-form-urlencoded" onsubmit="return checkage()">
+
+        <label for="fname">first name:<input type="text " id="fname "></label>
+        <br/>
+        <br/>
+        <label for="lname">Last Name:<input type="text " id="lname ">
+        </label>
+        <br/>
+        <br/>
+        <label for="papa">Father name:<input type="text " id="papa "></label>
+        <br/>
+        <br/>
+        <label for="mom">Mother Name:<input type="text" id="mom"></label>
+        <br/>
+        <br/>
+        <label for="roll">Roll Number:<input type="text" id="roll"></label>
+        <br/>
+        <br/>
+        <label for="age">Age:<input type="number" id="age"></label>
+        <br/>
+        <br/>
+        <label for="gender">Gender<input type="radio" id="gender" name="gender" value="male">Male <input type="radio " id="gender" value="female" name="gender">Female</label>
+        <br/>
+        <br/>
+        <label for="fav ">Favorite Game
+            <br/>
+            <br/>
+            <input type="checkbox" id="fav" name="fav" value="cricket ">Cricket
+            <br/>
+            <input type="checkbox" id="fav" value="football" name="fav ">football
+            <br/>
+            <input type="checkbox" id="fav" value="vollyball" name="fav ">vollyball
+            <br/>
+                <input
+                    type="checkbox" id="fav " value="Badminton" name="fav ">Badminton
+                    <br/>
+                    <br/>
+                </label for="address ">Address:</label><br/><textarea cols="10 " rows="3 " id="address "></textarea>
+        <br/>
+        <br/>
+        <label for="pin ">Pin:<input type="text " maxlength="4 " size="2 " id="pin "></label>
+        <br/>
+        <br/>
+        <label for="Password ">Password : <input type="password " id="Password " name="Password "></label>
+        <br/>
+        <br/>
+        <label for="subject">Favorite Subject </label><select name="dropdown" id="subject">
+            <optgroup label="common to all branches ">
+                <option value="maths">Mathematics</option>
+                <option value="physics ">Physics</option><option value="chemistry">Chemistry</option>
+                <option value="eco">Economics</option>
+            </optgroup>
+            <optgroup label="Branch Specific ">
+                <option value="dsd">Digital Design</option>
+                <option value="oops">Object oriented programming</option>
+                <option value="ds">Data Structure</option>
+                <option value="wd">webdesign</option>
+            </optgroup></select><br/><br/>About Yourself:
+        <br/>
+        <textarea id="intro" rows="4" col="10"></textarea>
+        <br/>
+        <br/>
+        <label for="email">Email:<input type="email" id="name" name="email "></label>
+        <br/>
+        <br/>
+        <label for="admitcard">Upload your Admit Card:
+            
+            <br/>
+            <br/>
+            <input type="file" name="admitcard" id="admitcard" accept=".pdf/* "></label>
+        <br/>
+        <br/>
+        <label for="registrationform">Upload your Registration form:
+            <br/>
+            <br/><input type="file" name="registrationform" id="registrationform" accept=".pdf/* "></label>
+        <br/>
+        <br/>
+        <input type="reset" value="reset "><br/>
+        <br/><label><input type="submit" value="submit"></label></form>
+</body>
+
+</html>
